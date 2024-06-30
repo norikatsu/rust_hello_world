@@ -1,14 +1,9 @@
 
-mod math;
-use math::add_func;
+// 通常は沢山のmoduleを利用する
+use std::error::Error;
 
-
-fn main() {
-    let a = 10;
-    let b = 30;
-    let c = add_func(a,b);
-
-    println!("Add = {}", c);
+fn main() -> Result<(), Box<dyn Error>> {
+    hello_world::run()
 }
 
 
