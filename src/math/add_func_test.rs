@@ -17,4 +17,3 @@ mod tests {
     //     assert_eq!(Add_func(1, 2), 4);
     // }
 }
-
