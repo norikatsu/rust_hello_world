@@ -15,14 +15,19 @@ jobs:
 
     runs-on: ubuntu-latest
 
-    defaults:
-      run:
-        working-directory: test_rust
+    #defaults:
+    #  run:
+    #    working-directory: test_rust
 
     steps:
     - name: Checkout
       uses: actions/checkout@v4
-
+    - name: Set Toolchain
+      # https://github.com/dtolnay/rust-toolchain
+      uses: dtolnay/rust-toolchain@master
+      with:
+        toolchain: stable
+        components: rustfmt, clippy
     - name: Cache cargo registry
       uses: actions/cache@v4
       with:
